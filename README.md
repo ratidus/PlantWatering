@@ -18,3 +18,6 @@ python3 src/app.py
 python3 -m unittest discover -s tests -v
 ```
 
+
+## Автор
+Кученьов І.Д., ст. гр. КВ-42
