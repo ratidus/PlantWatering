@@ -49,8 +49,15 @@ class TestDispatcherAndStorage(unittest.TestCase):
         self.dispatcher = TaskDispatcher(storage=self.storage, catalog=PlantCatalog())
 
     def tearDown(self) -> None:
+        import gc
+        self.storage = None
+        self.dispatcher = None
+        gc.collect()
         if os.path.exists(self.tmp.name):
-            os.remove(self.tmp.name)
+            try:
+                os.remove(self.tmp.name)
+            except PermissionError:
+                pass
 
     def test_catalog_search_and_filter(self) -> None:
         res = self.dispatcher.search_catalog(query="фікус")
