@@ -18,8 +18,6 @@ python3 src/app.py
 python3 -m unittest discover -s tests -v
 ```
 
-## Публікація локального Git-репозиторію на GitHub
-```bash
-git remote add origin https://github.com/<ваш-логін>/PlantWatering.git
-git push -u origin main --all
-```
+
+## Автор
+Кученьов І.Д., ст. гр. КВ-42
