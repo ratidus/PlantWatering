@@ -186,8 +186,7 @@ class PlantWateringApp(tk.Tk):
         path = filedialog.asksaveasfilename(defaultextension=".csv", filetypes=[("CSV файл", "*.csv")])
         if path:
             self.dispatcher.export_schedule_csv(path)
-            messagebox.showinfo("Експорт", f"Графік успішно збережено у файл:
-{path}")
+            messagebox.showinfo("Експорт", f"Графік успішно збережено у файл: {path}")
 
 
 if __name__ == "__main__":
